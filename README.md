@@ -150,6 +150,6 @@ func main() {
 ```
 
 If you want, I can also:
-•	polish it to sound more “enterprise-grade”
-•	add badges / versioning / examples section
-•	or convert it into a proper pkg.go.dev-style README
+* polish it to sound more “enterprise-grade”
+* add badges / versioning / examples section
+* or convert it into a proper pkg.go.dev-style README
