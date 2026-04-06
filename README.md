@@ -5,7 +5,7 @@
 ## Установка
 
 ```bash
-go get github.com/user/chaoslib-service-lib
+go get github.com/paekos-enterprises-ltd/chaoslib-service-lib
 ```
 
 ## Использование
@@ -13,7 +13,7 @@ go get github.com/user/chaoslib-service-lib
 Сначала необходимо импортировать библиотеку:
 
 ```go
-import "github.com/user/chaoslib-service-lib"
+import "github.com/paekos-enterprises-ltd/chaoslib-service-lib"
 ```
 
 Затем можно создавать клиенты для различных эндпоинтов API.
@@ -25,11 +25,11 @@ package main
 
 import (
 	"fmt"
-	"github.com/user/chaoslib-service-lib"
+	"github.com/paekos-enterprises-ltd/chaoslib-service-lib"
 )
 
 func main() {
-	client := chaoslib_service_api.NewChaosLibRand("http://localhost:8080")
+	client := chaoslib_service_api.NewChaosLibRand("http://localhost:8033")
 	
 	// Получить случайное число int64
 	num, err := client.Int63()
@@ -54,11 +54,11 @@ package main
 
 import (
 	"fmt"
-	"github.com/user/chaoslib-service-lib"
+	"github.com/paekos-enterprises-ltd/chaoslib-service-lib"
 )
 
 func main() {
-	client := chaoslib_service_api.NewCrashProvider("http://localhost:8080")
+	client := chaoslib_service_api.NewCrashProvider("http://localhost:8033")
 	
 	crashPoint, err := client.Crash()
 	if err != nil {
@@ -75,11 +75,11 @@ package main
 
 import (
 	"fmt"
-	"github.com/user/chaoslib-service-lib"
+	"github.com/paekos-enterprises-ltd/chaoslib-service-lib"
 )
 
 func main() {
-	client := chaoslib_service_api.NewWeightProvider("http://localhost:8080")
+	client := chaoslib_service_api.NewWeightProvider("http://localhost:8033")
 	
 	// Получить одно значение
 	weight, err := client.Weight(0)
@@ -104,11 +104,11 @@ package main
 
 import (
 	"fmt"
-	"github.com/user/chaoslib-service-lib"
+	"github.com/paekos-enterprises-ltd/chaoslib-service-lib"
 )
 
 func main() {
-	client := chaoslib_service_api.NewSlotsProvider("http://localhost:8080")
+	client := chaoslib_service_api.NewSlotsProvider("http://localhost:8033")
 	
 	reels := []int{10, 20, 30}
 
@@ -135,11 +135,11 @@ package main
 
 import (
 	"fmt"
-	"github.com/user/chaoslib-service-lib"
+	"github.com/paekos-enterprises-ltd/chaoslib-service-lib"
 )
 
 func main() {
-	client := chaoslib_service_api.NewPenaltyProvider("http://localhost:8080")
+	client := chaoslib_service_api.NewPenaltyProvider("http://localhost:8033")
 	
 	penalty, err := client.Penalty()
 	if err != nil {
